@@ -12,10 +12,7 @@ app.use(express.json()); // Parses JSON request body
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGO_URI || "your-mongodb-url-here", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI || "your-mongodb-url-here")
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
